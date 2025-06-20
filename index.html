@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChalBayChal | Welcome to the Future</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Orbitron', sans-serif;
+    }
+    body {
+      margin: 0;
+      background: linear-gradient(135deg, #0f0f0f, #1a1a2e);
+      color: white;
+      overflow-x: hidden;
+    }
+    a {
+      color: #0ff;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .splash {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      animation: splashFade 3s ease forwards;
+    }
+    @keyframes splashFade {
+      0% { opacity: 1; }
+      80% { opacity: 1; }
+      100% { opacity: 0; display: none; }
+    }
+    .splash h1 {
+      font-size: 2.5rem;
+      color: #0ff;
+      animation: glow 1.5s infinite alternate;
+    }
+    @keyframes glow {
+      0% { text-shadow: 0 0 10px #0ff; }
+      100% { text-shadow: 0 0 20px #0ff, 0 0 40px #0ff; }
+    }
+    .main {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      flex-direction: column;
+      animation: fadeIn 2s ease 3s forwards;
+      opacity: 0;
+      padding: 2rem;
+    }
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+    .hero-video {
+      width: 100%;
+      height: 100vh;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      opacity: 0.3;
+    }
+    h2 {
+      font-size: 3rem;
+      background: linear-gradient(90deg, #00f2fe, #4facfe);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    p {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+      max-width: 600px;
+    }
+    .explore-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+      width: 100%;
+      max-width: 1000px;
+    }
+    .card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid #0ff;
+      border-radius: 20px;
+      padding: 1.5rem;
+      box-shadow: 0 0 15px rgba(0,255,255,0.1);
+    }
+    .card:hover {
+      transform: scale(1.02);
+      transition: 0.3s ease;
+      box-shadow: 0 0 20px #0ff;
+    }
+    .ai-assist-embed {
+      margin-top: 4rem;
+      max-width: 100%;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+    iframe {
+      width: 100%;
+      height: 500px;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <video class="hero-video" autoplay muted loop>
+    <source src="https://cdn.pixabay.com/vimeo/405735841/future-37856.mp4?width=640&hash=2a5bc5d5f129f3034a8dca2a8c84b16d12676d42" type="video/mp4">
+  </video>
+
+  <div class="splash">
+    <h1>Welcome to the Future</h1>
+  </div>
+
+  <div class="main">
+    <h2>ChalBayChal 2030</h2>
+    <p>Experience a futuristic journey planner with AI assistant, smart dashboard, animated UI, and traveler rewards. The future of travel starts here.</p>
+
+    <div class="explore-cards">
+      <div class="card">
+        <h3>🗻 Manali Escape</h3>
+        <p>Snowy peaks & serene vibes. Book now!</p>
+      </div>
+      <div class="card">
+        <h3>🏝 Goa Unlimited</h3>
+        <p>Beaches, parties & paradise. Plan your escape.</p>
+      </div>
+      <div class="card">
+        <h3>🌆 Delhi Diaries</h3>
+        <p>Explore food, forts & street soul of India.</p>
+      </div>
+    </div>
+
+    <div class="ai-assist-embed">
+      <iframe src="https://chat.openai.com/embed"></iframe>
+    </div>
+  </div>
+</body>
+</html>
